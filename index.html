@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Sterling Autonomous Systems — the end-to-end platform to stand up a sovereign unmanned vehicle industry across air, land, and maritime domains. Positioned to anchor a regional sovereign partnership across the GCC and aligned defense corridors." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Sterling Autonomous Systems — We Build Sovereign Unmanned Industries" />
+<meta property="og:description" content="The end-to-end platform to stand up a sovereign unmanned vehicle industry — air, land, and maritime — across manufacturing, deployment, intelligence, and export. Positioned to anchor a long-horizon regional sovereign partnership." />
+<meta property="og:type" content="website" />
+<link rel="alternate" hreflang="en" href="./index.html" />
+<link rel="alternate" hreflang="ar" href="./ar/index.html" />
+<title>Sterling Autonomous Systems — We Build Sovereign Unmanned Industries</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#070708;
+    --bg-elev:#0d0d10;
+    --bg-card:#111114;
+    --line:#1c1c22;
+    --line-bright:#2a2a33;
+    --text:#e8e8ea;
+    --text-dim:#9a9aa3;
+    --text-faint:#5a5a64;
+    --accent:#c8a96a;
+    --accent-bright:#e6c581;
+    --accent-deep:#8a6f3f;
+    --signal:#ff5b3a;
+    --maxw:1280px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-weight:400;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--accent);color:#000}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  @media(max-width:720px){.container{padding:0 20px}}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:500;letter-spacing:0.04em}
+  .label{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:500;
+  }
+  .label.dim{color:var(--text-faint)}
+  .divider{height:1px;background:var(--line);width:100%}
+
+  .topbar{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(7,7,8,0.72);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:0.02em}
+  .brand-mark{width:26px;height:26px;display:flex;align-items:center;justify-content:center;border:1px solid var(--accent);color:var(--accent)}
+  .brand-mark svg{width:14px;height:14px}
+  .brand-name{font-size:14px}
+  .brand-name span{color:var(--text-dim);font-weight:400;margin-left:6px}
+  nav.primary{display:flex;align-items:center;gap:34px}
+  nav.primary a{font-size:13px;color:var(--text-dim);transition:color .2s ease}
+  nav.primary a:hover{color:var(--text)}
+  .top-actions{display:flex;align-items:center;gap:16px}
+  .lang-toggle{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--text-dim);padding:9px 12px;
+    border:1px solid var(--line-bright);
+    transition:all .2s ease;
+  }
+  .lang-toggle:hover{color:var(--accent);border-color:var(--accent-deep)}
+  .cta-top{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:12px;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--accent-deep);
+    padding:9px 16px;transition:all .2s ease;
+  }
+  .cta-top:hover{background:var(--accent);color:#000;border-color:var(--accent)}
+  @media(max-width:860px){nav.primary{display:none}}
+
+  .hero{position:relative;padding:160px 0 120px;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero-grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size:64px 64px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 75%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%, #000 30%, transparent 75%);
+    pointer-events:none;
+  }
+  .hero-glow{
+    position:absolute;top:-20%;left:50%;transform:translateX(-50%);
+    width:900px;height:900px;
+    background:radial-gradient(circle, rgba(200,169,106,0.14) 0%, transparent 60%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2}
+  .hero-meta{display:flex;align-items:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+  .pill{
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--accent);border:1px solid var(--line-bright);
+    padding:6px 12px;background:var(--bg-elev);
+  }
+  .pill .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:middle;box-shadow:0 0 10px var(--accent)}
+  h1.hero-title{
+    font-size:clamp(38px, 6.4vw, 84px);
+    line-height:0.98;letter-spacing:-0.025em;font-weight:700;
+    max-width:1100px;margin-bottom:32px;
+  }
+  h1.hero-title .accent{color:var(--accent)}
+  .hero-sub{font-size:clamp(16px,1.4vw,19px);color:var(--text-dim);max-width:700px;margin-bottom:48px;line-height:1.55}
+  .hero-sub strong{color:var(--text);font-weight:500}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:80px}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'JetBrains Mono',ui-monospace,monospace;
+    font-size:12px;letter-spacing:0.14em;text-transform:uppercase;
+    padding:14px 22px;transition:all .2s ease;
+    border:1px solid transparent;cursor:pointer;
+  }
+  .btn-primary{background:var(--accent);color:#000;border-color:var(--accent)}
+  .btn-primary:hover{background:var(--accent-bright);border-color:var(--accent-bright)}
+  .btn-ghost{color:var(--text);border-color:var(--line-bright);background:transparent}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .btn .arrow{transition:transform .2s ease}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);padding-top:32px}
+  .stat{padding-right:24px}
+  .stat .v{font-size:26px;font-weight:600;letter-spacing:-0.02em;color:var(--text);margin-bottom:6px}
+  .stat .l{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-faint)}
+  @media(max-width:760px){.hero-stats{grid-template-columns:repeat(2,1fr);gap:24px}}
+
+  section.bay{padding:120px 0;border-bottom:1px solid var(--line);position:relative}
+  .section-head{display:grid;grid-template-columns:200px 1fr;gap:64px;margin-bottom:72px;align-items:start}
+  @media(max-width:860px){.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:48px}}
+  .section-head .col-meta .label{display:block;margin-bottom:12px}
+  .section-head .col-meta .ref{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--text-faint);letter-spacing:0.06em}
+  .section-head h2{font-size:clamp(30px,3.8vw,52px);letter-spacing:-0.02em;line-height:1.05;font-weight:600;max-width:880px}
+  .section-head h2 .accent{color:var(--accent)}
+  .section-lede{font-size:17px;color:var(--text-dim);max-width:760px;margin-top:24px;line-height:1.6}
+
+  .thesis-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:start}
+  @media(max-width:860px){.thesis-grid{grid-template-columns:1fr;gap:40px}}
+  .thesis-body p{font-size:17px;color:var(--text-dim);margin-bottom:20px;line-height:1.65}
+  .thesis-body p strong{color:var(--text);font-weight:500}
+  .thesis-card{background:var(--bg-card);border:1px solid var(--line);padding:36px}
+  .thesis-card .label{margin-bottom:18px}
+  .thesis-card h3{font-size:22px;letter-spacing:-0.01em;font-weight:600;margin-bottom:16px}
+  .thesis-card p{color:var(--text-dim);font-size:15px}
+  .thesis-list{list-style:none;margin-top:22px}
+  .thesis-list li{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);font-size:14px;color:var(--text-dim)}
+  .thesis-list li:first-child{border-top:none}
+  .thesis-list .k{font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--accent);font-size:12px;min-width:48px;letter-spacing:0.06em}
+
+  /* Operating models */
+  .modes{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-top:8px}
+  @media(max-width:860px){.modes{grid-template-columns:1fr}}
+  .mode{padding:44px;border-right:1px solid var(--line);position:relative}
+  .modes > .mode:last-child{border-right:none}
+  @media(max-width:860px){.mode{border-right:none;border-bottom:1px solid var(--line)}.modes > .mode:last-child{border-bottom:none}}
+  .mode .mode-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:18px}
+  .mode h3{font-size:24px;font-weight:600;letter-spacing:-0.015em;margin-bottom:14px}
+  .mode .sub{font-size:13px;color:var(--text-faint);margin-bottom:18px;font-family:'JetBrains Mono',monospace;letter-spacing:0.04em}
+  .mode p{color:var(--text-dim);font-size:15px;line-height:1.65;margin-bottom:18px}
+  .mode ul{list-style:none}
+  .mode ul li{padding:10px 0;border-top:1px solid var(--line);font-size:14px;color:var(--text-dim);display:flex;gap:12px}
+  .mode ul li::before{content:"";width:6px;height:6px;background:var(--accent);margin-top:8px;flex-shrink:0}
+
+  .pillars{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line)}
+  @media(max-width:860px){.pillars{grid-template-columns:1fr}}
+  .pillar{padding:40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .2s ease;position:relative}
+  .pillar:nth-child(2n){border-right:none}
+  .pillar:nth-last-child(-n+2){border-bottom:none}
+  @media(max-width:860px){.pillar{border-right:none}.pillar:nth-last-child(-n+2){border-bottom:1px solid var(--line)}.pillar:last-child{border-bottom:none}}
+  .pillar:hover{background:var(--bg-elev)}
+  .pillar .num{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--text-faint);letter-spacing:0.14em;margin-bottom:18px}
+  .pillar h3{font-size:22px;letter-spacing:-0.01em;font-weight:600;margin-bottom:14px}
+  .pillar p{color:var(--text-dim);font-size:15px;line-height:1.6}
+  .pillar .icon{width:32px;height:32px;border:1px solid var(--accent-deep);color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+  .pillar .icon svg{width:16px;height:16px}
+
+  .missions{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:860px){.missions{grid-template-columns:1fr}}
+  .mission{background:var(--bg-card);border:1px solid var(--line);padding:32px;position:relative;transition:border-color .2s ease, transform .2s ease}
+  .mission:hover{border-color:var(--accent-deep);transform:translateY(-2px)}
+  .mission .tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;color:var(--accent);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:24px}
+  .mission h3{font-size:20px;letter-spacing:-0.01em;font-weight:600;margin-bottom:12px}
+  .mission p{color:var(--text-dim);font-size:14px;line-height:1.6;margin-bottom:24px}
+  .mission .meta{display:flex;justify-content:space-between;padding-top:18px;border-top:1px solid var(--line);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;color:var(--text-faint);letter-spacing:0.08em}
+  .mission .meta b{color:var(--accent);font-weight:500}
+
+  .phases{position:relative}
+  .phase{display:grid;grid-template-columns:60px 1fr;gap:32px;padding:36px 0;position:relative}
+  .phase + .phase{border-top:1px solid var(--line)}
+  .phase-marker{width:48px;height:48px;border:1px solid var(--accent);background:var(--bg);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:0.06em;position:relative;z-index:2}
+  .phase-body .label{margin-bottom:10px;display:block}
+  .phase-body h3{font-size:24px;letter-spacing:-0.015em;font-weight:600;margin-bottom:12px}
+  .phase-body p{color:var(--text-dim);font-size:15px;max-width:760px;line-height:1.65;margin-bottom:18px}
+  .phase-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .phase-tag{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dim);padding:5px 10px;border:1px solid var(--line-bright);background:var(--bg-elev)}
+
+  .intel-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  @media(max-width:980px){.intel-grid{grid-template-columns:1fr;gap:48px}}
+  .intel-body p{color:var(--text-dim);font-size:16px;line-height:1.65;margin-bottom:18px}
+  .intel-body p strong{color:var(--text);font-weight:500}
+  .intel-features{margin-top:28px;display:grid;gap:14px}
+  .intel-feat{display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--bg-elev);border:1px solid var(--line)}
+  .intel-feat .ic{color:var(--accent);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;min-width:44px}
+  .intel-feat .tx h4{font-size:14px;font-weight:600;margin-bottom:4px}
+  .intel-feat .tx p{font-size:13px;color:var(--text-dim);margin:0;line-height:1.55}
+  .intel-visual{aspect-ratio:1/1;background:var(--bg-card);border:1px solid var(--line);position:relative;overflow:hidden;padding:32px}
+  .intel-visual::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right, rgba(200,169,106,0.06) 1px, transparent 1px),linear-gradient(to bottom, rgba(200,169,106,0.06) 1px, transparent 1px);background-size:32px 32px}
+  .intel-visual svg{width:100%;height:100%;position:relative;z-index:2}
+  .intel-tag{position:absolute;top:20px;left:20px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);letter-spacing:0.14em;text-transform:uppercase}
+  .intel-tag-r{position:absolute;top:20px;right:20px;z-index:3;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-faint);letter-spacing:0.14em}
+
+  .partners{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+  @media(max-width:860px){.partners{grid-template-columns:1fr}}
+  .partner{padding:48px;border-right:1px solid var(--line)}
+  .partners > .partner:last-child{border-right:none}
+  @media(max-width:860px){.partner{border-right:none;border-bottom:1px solid var(--line)}.partners > .partner:last-child{border-bottom:none}}
+  .partner .label{margin-bottom:16px;display:block}
+  .partner h3{font-size:24px;font-weight:600;margin-bottom:14px;letter-spacing:-0.015em}
+  .partner p{color:var(--text-dim);font-size:15px;line-height:1.65;margin-bottom:20px}
+  .partner ul{list-style:none}
+  .partner ul li{padding:12px 0;border-top:1px solid var(--line);font-size:14px;color:var(--text-dim);display:flex;gap:12px}
+  .partner ul li::before{content:"";width:6px;height:6px;background:var(--accent);margin-top:8px;flex-shrink:0}
+
+  .sov-posture{
+    margin-top:24px;padding:32px 36px;
+    background:var(--bg-card);border:1px solid var(--line);
+    border-left:2px solid var(--accent);
+    display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;
+  }
+  @media(max-width:720px){.sov-posture{grid-template-columns:1fr;gap:14px}}
+  .sov-posture .label{display:block;margin-bottom:8px}
+  .sov-posture h4{font-size:18px;font-weight:600;margin-bottom:8px;letter-spacing:-0.01em}
+  .sov-posture p{font-size:14px;color:var(--text-dim);line-height:1.6;margin:0}
+  .sov-posture .icon-big{width:64px;height:64px;border:1px solid var(--accent-deep);color:var(--accent);display:flex;align-items:center;justify-content:center}
+  .sov-posture .icon-big svg{width:28px;height:28px}
+
+  .alignment{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+  @media(max-width:860px){.alignment{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.alignment{grid-template-columns:1fr}}
+  .align-cell{padding:32px;border-right:1px solid var(--line);transition:background .2s ease}
+  .align-cell:last-child{border-right:none}
+  @media(max-width:860px){.align-cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.align-cell:nth-child(2n){border-right:none}.align-cell:nth-last-child(-n+2){border-bottom:none}}
+  @media(max-width:520px){.align-cell{border-right:none;border-bottom:1px solid var(--line)}.align-cell:last-child{border-bottom:none}}
+  .align-cell:hover{background:var(--bg-elev)}
+  .align-cell .num{font-family:'JetBrains Mono',monospace;font-size:36px;color:var(--accent);font-weight:500;letter-spacing:-0.02em;margin-bottom:18px}
+  .align-cell h4{font-size:15px;font-weight:600;margin-bottom:8px}
+  .align-cell p{font-size:13px;color:var(--text-dim);line-height:1.55}
+
+  .cta-band{padding:120px 0;border-bottom:1px solid var(--line);background:radial-gradient(ellipse 80% 60% at 50% 50%, rgba(200,169,106,0.07) 0%, transparent 70%);text-align:center}
+  .cta-band h2{font-size:clamp(28px,4vw,46px);letter-spacing:-0.02em;font-weight:600;max-width:820px;margin:0 auto 24px;line-height:1.1}
+  .cta-band h2 .accent{color:var(--accent)}
+  .cta-band p{color:var(--text-dim);font-size:17px;max-width:680px;margin:0 auto 40px}
+  .cta-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+
+  footer{padding:64px 0 48px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+  .foot-brand{font-size:14px;color:var(--text-dim);max-width:380px;margin-top:14px;line-height:1.6}
+  .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-faint);margin-bottom:18px}
+  .foot-col a, .foot-col span{display:block;font-size:13px;color:var(--text-dim);margin-bottom:10px;transition:color .2s ease}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-bottom{padding-top:32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-faint);letter-spacing:0.06em}
+  .foot-disclaimer{font-size:11px;color:var(--text-faint);max-width:780px;line-height:1.6;margin-top:14px}
+
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  @keyframes pulse{0%{transform:scale(0.8);opacity:0.7}50%{transform:scale(1.1);opacity:1}100%{transform:scale(0.8);opacity:0.7}}
+  .radar-pulse{animation:pulse 2.4s ease-in-out infinite;transform-origin:center}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .radar-pulse{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M2 12 L12 4 L22 12 L12 20 Z" />
+          <circle cx="12" cy="12" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <div class="brand-name">STERLING AUTONOMOUS SYSTEMS<span>/ SAS</span></div>
+    </a>
+    <nav class="primary">
+      <a href="#thesis">Thesis</a>
+      <a href="#models">Models</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#missions">Missions</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#partnership">JV</a>
+    </nav>
+    <div class="top-actions">
+      <a href="./ar/index.html" class="lang-toggle" hreflang="ar" aria-label="Switch to Arabic">العربية</a>
+      <a href="#engage" class="cta-top">Engage →</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner">
+    <div class="hero-meta reveal">
+      <span class="pill"><span class="dot"></span>Joint Venture · Integrated Dynamics</span>
+      <span class="pill mono">Positioning · GCC + Aligned Defense Corridors</span>
+    </div>
+
+    <h1 class="hero-title reveal">
+      We build sovereign<br>
+      <span class="accent">unmanned industries.</span>
+    </h1>
+
+    <p class="hero-sub reveal">
+      Sterling Autonomous Systems is the end-to-end platform to stand up
+      a sovereign unmanned vehicle industry — across
+      <strong>air, land, and maritime domains</strong> — spanning
+      manufacturing, deployment, intelligence, and export.
+      We are positioning to anchor that industrial partnership with a
+      regional sovereign stakeholder, with the depth to deliver the
+      capability ourselves on their behalf.
+    </p>
+
+    <div class="hero-actions reveal">
+      <a href="#engage" class="btn btn-primary">
+        Engage Leadership <span class="arrow">→</span>
+      </a>
+      <a href="#thesis" class="btn btn-ghost">
+        Read the Thesis <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="hero-stats reveal">
+      <div class="stat">
+        <div class="v">3<span style="color:var(--accent)">·</span>Phase</div>
+        <div class="l">Localization Roadmap</div>
+      </div>
+      <div class="stat">
+        <div class="v">Air<span style="color:var(--accent)">·</span>Land<span style="color:var(--accent)">·</span>Sea</div>
+        <div class="l">Multi-Domain Unmanned</div>
+      </div>
+      <div class="stat">
+        <div class="v">Transfer<span style="color:var(--accent)">/</span>Turnkey</div>
+        <div class="l">Two Operating Models</div>
+      </div>
+      <div class="stat">
+        <div class="v">GCC<span style="color:var(--accent)">+</span></div>
+        <div class="l">Regional Export by Design</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THESIS -->
+<section class="bay" id="thesis">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">01 / Thesis</span>
+        <span class="ref">REF · SAS-T-001</span>
+      </div>
+      <div>
+        <h2>Many nations procure unmanned systems. Few build <span class="accent">sovereign unmanned industries.</span></h2>
+        <p class="section-lede">
+          Sterling Autonomous Systems exists to close that gap — a platform
+          purpose-built to be deployed alongside a regional sovereign
+          defense and industrial stakeholder, with the GCC and aligned
+          defense corridors as the priority target markets.
+        </p>
+      </div>
+    </div>
+
+    <div class="thesis-grid">
+      <div class="thesis-body reveal">
+        <p>
+          The global unmanned systems market has matured beyond procurement.
+          Strategic value now flows to nations that <strong>own the full
+          stack</strong> — from platform manufacturing and software
+          integration, through operational deployment, to data intelligence
+          and regional export — across air, land, and maritime domains.
+        </p>
+        <p>
+          The region's leading defense markets, under sweeping national
+          industrial transformation agendas, are uniquely positioned to
+          lead this shift. Sterling Autonomous Systems is built to be the
+          sovereign partner of choice for that build-out — offering the
+          end-to-end industrial, operational, and intelligence capability
+          required to stand up a national unmanned vehicle industry, not
+          merely to import one.
+        </p>
+        <p>
+          Our advantage is execution depth. Through our partnership with
+          <strong>Integrated Dynamics</strong>, the platform draws on
+          decades of fielded UAS programs, defense-grade engineering,
+          full-portfolio manufacturing, and an established defense customer
+          pedigree. The platform is engineered from day one to serve the
+          <strong>GCC, Africa, and allied markets</strong> as a regional
+          export hub.
+        </p>
+      </div>
+
+      <aside class="thesis-card reveal">
+        <span class="label">Strategic Posture</span>
+        <h3>Not a vendor. A sovereign capability platform.</h3>
+        <p>
+          We deliver hardware, but we are measured on outcomes — persistent
+          situational awareness, mission-validated performance, and durable
+          sovereign capability transfer across multiple unmanned domains.
+        </p>
+        <ul class="thesis-list">
+          <li><span class="k">01</span><span>Sovereign manufacturing &amp; IP localization</span></li>
+          <li><span class="k">02</span><span>Mission-validated platforms across air, land &amp; sea</span></li>
+          <li><span class="k">03</span><span>Integrated intelligence &amp; data layer</span></li>
+          <li><span class="k">04</span><span>Hybrid procurement + service-based model</span></li>
+          <li><span class="k">05</span><span>Regional export hub by design</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATING MODELS -->
+<section class="bay" id="models">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">02 / Operating Models</span>
+        <span class="ref">REF · SAS-O-002</span>
+      </div>
+      <div>
+        <h2>Two ways to stand up <span class="accent">a sovereign unmanned industry.</span></h2>
+        <p class="section-lede">
+          A regional sovereign partner selects the engagement model that
+          matches their industrial maturity, capital posture, and strategic
+          timeline. Sterling Autonomous Systems is built to deliver under
+          either.
+        </p>
+      </div>
+    </div>
+
+    <div class="modes reveal">
+      <div class="mode">
+        <div class="mode-tag">▲ Model · M-A</div>
+        <h3>Capability Transfer</h3>
+        <div class="sub">// Sovereign-led industrialization, SAS-enabled.</div>
+        <p>
+          The sovereign builds the industry. Sterling Autonomous Systems
+          provides the platform technology, manufacturing IP, training, and
+          integration support — progressively transferring full capability to
+          the host nation under an agreed sovereignty timeline. Anchored by
+          Integrated Dynamics' decades of fielded UAS engineering and
+          manufacturing depth.
+        </p>
+        <ul>
+          <li>Licensed manufacturing &amp; technology transfer</li>
+          <li>Workforce development &amp; technical training programs</li>
+          <li>Joint R&amp;D and indigenous engineering build-out</li>
+          <li>Long-horizon advisory engagement</li>
+        </ul>
+      </div>
+      <div class="mode">
+        <div class="mode-tag">▲ Model · M-B</div>
+        <h3>Turnkey Industrialization</h3>
+        <div class="sub">// SAS-led build, sovereign-anchored.</div>
+        <p>
+          Sterling Autonomous Systems builds the industry on the sovereign's
+          behalf — establishing facilities, supply chain, and operational
+          doctrine in-country, then progressively transferring ownership and
+          operational control to the host nation on a defined schedule.
+          Underwritten by an established defense engineering and
+          manufacturing track record through Integrated Dynamics.
+        </p>
+        <ul>
+          <li>End-to-end industrial build &amp; commissioning</li>
+          <li>Operational delivery from day one</li>
+          <li>Defined sovereignty handover milestones</li>
+          <li>Service-based contract framework with capability options</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="bay" id="capabilities">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">03 / Capabilities</span>
+        <span class="ref">REF · SAS-C-003</span>
+      </div>
+      <div>
+        <h2>An integrated stack — <span class="accent">platforms to intelligence.</span></h2>
+        <p class="section-lede">
+          Six capability pillars define the SAS platform — spanning
+          unmanned air, ground, and maritime systems. Each is engineered
+          for sovereign deployment and progressive localization within the
+          host nation.
+        </p>
+      </div>
+    </div>
+
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L20 12 L12 22 L4 12 Z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div class="num">// PILLAR 01</div>
+        <h3>Multi-Domain Platforms</h3>
+        <p>Mission-validated unmanned platforms across air, ground, and maritime classes — anchored by Integrated Dynamics' decades of fielded UAS programs, defense customer pedigree, and a full-portfolio engineering and manufacturing record. Adaptable to sovereign mission profiles.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <div class="num">// PILLAR 02</div>
+        <h3>Localized Manufacturing</h3>
+        <p>Phased build-out from in-country assembly and integration toward full multi-domain manufacturing capability — leveraging Integrated Dynamics' established production know-how, supply chain qualification methods, workforce development practice, and IP localization frameworks.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <div class="num">// PILLAR 03</div>
+        <h3>Operational Deployment</h3>
+        <p>Field-ready deployment doctrine for border surveillance, tactical ISR, and critical infrastructure protection — validated through demonstration before scaled procurement.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12 L9 6 L15 14 L21 8"/><circle cx="9" cy="6" r="1.5" fill="currentColor"/><circle cx="15" cy="14" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <div class="num">// PILLAR 04</div>
+        <h3>Intelligence &amp; Data Layer</h3>
+        <p>Software platform for automated threat detection, persistent situational awareness, and actionable intelligence — converting sensor output into decision-grade insight at the edge.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12 L21 12"/><path d="M12 3 C16 7, 16 17, 12 21"/><path d="M12 3 C8 7, 8 17, 12 21"/></svg>
+        </div>
+        <div class="num">// PILLAR 05</div>
+        <h3>Regional Export Hub</h3>
+        <p>The host-nation production and integration base is engineered to support GCC, African, and allied market demand — extending sovereign industrial influence across high-growth defense corridors.</p>
+      </div>
+      <div class="pillar">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20 L4 8 L12 4 L20 8 L20 20"/><path d="M4 20 L20 20"/><path d="M10 20 L10 14 L14 14 L14 20"/></svg>
+        </div>
+        <div class="num">// PILLAR 06</div>
+        <h3>Sovereign IP &amp; R&amp;D</h3>
+        <p>Long-horizon investment in in-country research, advanced systems engineering, and indigenous IP — building enduring sovereign capability beyond the initial deployment cycle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSIONS -->
+<section class="bay" id="missions">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">04 / Mission Profiles</span>
+        <span class="ref">REF · SAS-M-004</span>
+      </div>
+      <div>
+        <h2>Mission-driven, <span class="accent">operationally validated.</span></h2>
+        <p class="section-lede">
+          We deploy against specific, high-value mission profiles across
+          air, ground, and maritime domains — rejecting generic platform
+          positioning in favor of measurable performance against current
+          and future regional defense requirements.
+        </p>
+      </div>
+    </div>
+
+    <div class="missions reveal">
+      <article class="mission">
+        <div class="tag">▲ Profile · M-01</div>
+        <h3>Border &amp; Coastal Surveillance</h3>
+        <p>Persistent autonomous patrol of extended frontier and coastal perimeters — layering aerial, ground, and unmanned surface assets. Multi-sensor fusion for day/night detection, classification, and operator handoff across distributed command nodes.</p>
+        <div class="meta"><span>Endurance Class</span><b>HIGH</b></div>
+      </article>
+      <article class="mission">
+        <div class="tag">▲ Profile · M-02</div>
+        <h3>Tactical ISR &amp; Joint Ops</h3>
+        <p>Intelligence, surveillance, and reconnaissance for ground forces and joint operations — rapid-launch tactical UAS with EO/IR payload integration, optional unmanned ground asset support, and secure mesh data return to command.</p>
+        <div class="meta"><span>Response Time</span><b>&lt; 8 MIN</b></div>
+      </article>
+      <article class="mission">
+        <div class="tag">▲ Profile · M-03</div>
+        <h3>Critical Infrastructure Protection</h3>
+        <p>Continuous monitoring of pipelines, energy facilities, ports, and high-value installations across air, ground, and maritime perimeters. Automated anomaly detection and alerting reduce response latency on threats to national assets.</p>
+        <div class="meta"><span>Coverage Mode</span><b>24 / 7</b></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="bay" id="roadmap">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">05 / Roadmap</span>
+        <span class="ref">REF · SAS-R-005</span>
+      </div>
+      <div>
+        <h2>The proposed engagement: <span class="accent">phased, execution-first.</span></h2>
+        <p class="section-lede">
+          On engagement with a sovereign partner, the platform progresses
+          from operational demonstration through localized manufacturing to
+          regional export — each phase gated by measurable performance
+          against mission and industrial milestones.
+        </p>
+      </div>
+    </div>
+
+    <div class="phases reveal">
+      <div class="phase">
+        <div class="phase-marker">P-01</div>
+        <div class="phase-body">
+          <span class="label">Demonstrate · 0–12 months</span>
+          <h3>Operational Validation</h3>
+          <p>
+            Deploy mission-ready UAS in real-world operating environments
+            agreed with the sovereign partner. Establish performance
+            evidence with defense stakeholders, lock joint mission doctrine
+            with end users, and define the localization framework.
+          </p>
+          <div class="phase-tags">
+            <span class="phase-tag">Field Demos</span>
+            <span class="phase-tag">Stakeholder Engagement</span>
+            <span class="phase-tag">Doctrine Lock</span>
+            <span class="phase-tag">Localization Framework</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-marker">P-02</div>
+        <div class="phase-body">
+          <span class="label">Localize · 12–36 months</span>
+          <h3>In-Country Assembly &amp; Integration</h3>
+          <p>
+            Stand up assembly and systems integration capability inside the
+            host nation. Begin supply chain qualification, workforce
+            training partnerships with national technical institutions, and
+            progressive transfer of manufacturing scope under the chosen
+            operating model.
+          </p>
+          <div class="phase-tags">
+            <span class="phase-tag">Assembly Line</span>
+            <span class="phase-tag">Workforce Dev</span>
+            <span class="phase-tag">Supplier Qual</span>
+            <span class="phase-tag">IP Transfer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-marker">P-03</div>
+        <div class="phase-body">
+          <span class="label">Scale · 36 months+</span>
+          <h3>Sovereign Manufacturing &amp; Regional Export</h3>
+          <p>
+            Full in-country manufacturing across air, land, and maritime
+            unmanned classes; indigenous R&amp;D; and a sovereign-anchored
+            regional export platform serving GCC, African, and allied
+            markets — establishing the host nation as a recognized
+            sovereign producer of unmanned vehicles.
+          </p>
+          <div class="phase-tags">
+            <span class="phase-tag">Full Manufacturing</span>
+            <span class="phase-tag">In-Country R&amp;D</span>
+            <span class="phase-tag">Export Licensing</span>
+            <span class="phase-tag">GCC + Africa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTELLIGENCE LAYER -->
+<section class="bay" id="intelligence">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">06 / Intelligence Layer</span>
+        <span class="ref">REF · SAS-I-006</span>
+      </div>
+      <div>
+        <h2>Beyond hardware: <span class="accent">sovereign defense intelligence infrastructure.</span></h2>
+      </div>
+    </div>
+
+    <div class="intel-grid">
+      <div class="intel-body reveal">
+        <p>
+          The differentiating layer of the SAS platform is software. On top
+          of the unmanned hardware — across air, ground, and maritime — we
+          deliver an <strong>intelligence and data capability</strong> that
+          transforms sensor output into decision-grade situational awareness
+          for commanders and analysts.
+        </p>
+        <p>
+          This positions Sterling Autonomous Systems not as a hardware
+          vendor, but as a provider of <strong>sovereign defense
+          intelligence infrastructure</strong> — the persistent, automated,
+          and long-horizon capability that defines modern multi-domain
+          unmanned operations.
+        </p>
+
+        <div class="intel-features">
+          <div class="intel-feat">
+            <div class="ic">↳ I-01</div>
+            <div class="tx">
+              <h4>Automated threat detection</h4>
+              <p>Edge inference for object classification, anomaly detection, and operator alerting across distributed UAS fleets.</p>
+            </div>
+          </div>
+          <div class="intel-feat">
+            <div class="ic">↳ I-02</div>
+            <div class="tx">
+              <h4>Persistent situational awareness</h4>
+              <p>Fused multi-sensor picture maintained across mission cycles, geographies, and command echelons.</p>
+            </div>
+          </div>
+          <div class="intel-feat">
+            <div class="ic">↳ I-03</div>
+            <div class="tx">
+              <h4>Sovereign data residency</h4>
+              <p>In-country data processing, storage, and access controls — engineered for national security requirements.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intel-visual reveal">
+        <div class="intel-tag">▼ FEED · ISR-LIVE</div>
+        <div class="intel-tag-r">SECURE · AES-256</div>
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+          <g fill="none" stroke="#c8a96a" stroke-width="0.6" opacity="0.4">
+            <circle cx="200" cy="200" r="180"/>
+            <circle cx="200" cy="200" r="140"/>
+            <circle cx="200" cy="200" r="100"/>
+            <circle cx="200" cy="200" r="60"/>
+            <circle cx="200" cy="200" r="20"/>
+          </g>
+          <g stroke="#c8a96a" stroke-width="0.8" opacity="0.6">
+            <line x1="200" y1="0" x2="200" y2="400"/>
+            <line x1="0" y1="200" x2="400" y2="200"/>
+          </g>
+          <g class="radar-pulse">
+            <circle cx="200" cy="200" r="100" fill="none" stroke="#c8a96a" stroke-width="1.5" opacity="0.8"/>
+          </g>
+          <g fill="#c8a96a">
+            <circle cx="120" cy="130" r="3"/>
+            <circle cx="280" cy="160" r="3"/>
+            <circle cx="240" cy="290" r="3"/>
+            <circle cx="100" cy="260" r="3"/>
+            <circle cx="320" cy="240" r="3"/>
+          </g>
+          <g fill="none" stroke="#c8a96a" stroke-width="0.5" opacity="0.5">
+            <circle cx="120" cy="130" r="10"/>
+            <circle cx="280" cy="160" r="10"/>
+            <circle cx="240" cy="290" r="10"/>
+            <circle cx="100" cy="260" r="10"/>
+            <circle cx="320" cy="240" r="10"/>
+          </g>
+          <g>
+            <rect x="195" y="195" width="10" height="10" fill="none" stroke="#ff5b3a" stroke-width="1.2"/>
+            <circle cx="200" cy="200" r="4" fill="#ff5b3a"/>
+          </g>
+          <g font-family="JetBrains Mono, monospace" font-size="8" fill="#9a9aa3" letter-spacing="0.05em">
+            <text x="125" y="120">UAS-01</text>
+            <text x="285" y="150">UAS-02</text>
+            <text x="245" y="280">UAS-03</text>
+            <text x="40" y="260">UAS-04</text>
+            <text x="325" y="230">UAS-05</text>
+            <text x="210" y="195" fill="#ff5b3a">TGT-001</text>
+          </g>
+          <g font-family="JetBrains Mono, monospace" font-size="9" fill="#c8a96a" font-weight="600">
+            <text x="195" y="14">N</text>
+            <text x="195" y="395">S</text>
+            <text x="6" y="204">W</text>
+            <text x="386" y="204">E</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP -->
+<section class="bay" id="partnership">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">07 / Joint Venture</span>
+        <span class="ref">REF · SAS-J-007</span>
+      </div>
+      <div>
+        <h2>An operating JV, <span class="accent">positioned to anchor a sovereign partnership.</span></h2>
+        <p class="section-lede">
+          Sterling Autonomous Systems is structured as a joint venture
+          combining commercial and capital execution with deep, fielded
+          unmanned-systems engineering and manufacturing credentials —
+          positioned to anchor a long-horizon partnership with a regional
+          sovereign defense and industrial stakeholder.
+        </p>
+      </div>
+    </div>
+
+    <div class="partners reveal">
+      <div class="partner">
+        <span class="label">Commercial &amp; Capital</span>
+        <h3>Vajih Khan</h3>
+        <p>
+          Operating principal of Sterling Ridge Management LP and West
+          Bridge Energy LLC. Brings commercialization, strategic
+          partnerships, and international market development experience
+          across high-growth sectors.
+        </p>
+        <ul>
+          <li>Strategic and institutional capital strategy</li>
+          <li>Regional stakeholder navigation across GCC defense markets</li>
+          <li>Joint venture structuring and operating leadership</li>
+          <li>International market entry and commercialization</li>
+        </ul>
+      </div>
+      <div class="partner">
+        <span class="label">Engineering &amp; Manufacturing</span>
+        <h3>Integrated Dynamics</h3>
+        <p>
+          A long-established unmanned-systems engineering and manufacturing
+          firm with decades of fielded program experience and proven
+          defense customer credentials. Anchors the venture's capability
+          promise with a full-portfolio platform record — from tactical
+          and ISR-class UAS through target systems, training drones, and
+          mission payload integration.
+        </p>
+        <ul>
+          <li>Decades of fielded UAS programs across multiple classes</li>
+          <li>Defense-grade systems engineering and integration depth</li>
+          <li>Established manufacturing know-how and IP foundation</li>
+          <li>Active defense customer base and operational track record</li>
+          <li>Heritage adaptable across air, ground, and maritime unmanned</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sov-posture reveal" aria-label="Sovereign partnership posture">
+      <div class="icon-big" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12 L22 12"/>
+          <path d="M12 2 C16 7, 16 17, 12 22"/>
+          <path d="M12 2 C8 7, 8 17, 12 22"/>
+        </svg>
+      </div>
+      <div>
+        <span class="label">// Sovereign Partnership Posture</span>
+        <h4>Positioning to anchor a regional sovereign partnership.</h4>
+        <p>
+          Sterling Autonomous Systems is positioning itself to partner with
+          a regional sovereign defense and industrial stakeholder to anchor
+          a national unmanned vehicle industry across air, land, and
+          maritime domains. The venture is engineering its platform, model,
+          and engagement posture to be procurement-ready for sovereign
+          defense agencies, military industrial entities, and strategic
+          investment partners. Confidential discussions welcomed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALIGNMENT -->
+<section class="bay" id="alignment">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="col-meta">
+        <span class="label">08 / Strategic Alignment</span>
+        <span class="ref">REF · SAS-A-008</span>
+      </div>
+      <div>
+        <h2>Designed to advance <span class="accent">regional industrial transformation priorities.</span></h2>
+        <p class="section-lede">
+          The platform is engineered to advance four anchor objectives
+          common to the region's national transformation agendas — and
+          equivalent priorities across aligned GCC defense industrial
+          strategies.
+        </p>
+      </div>
+    </div>
+
+    <div class="alignment reveal">
+      <div class="align-cell">
+        <div class="num">01</div>
+        <h4>Economic Diversification</h4>
+        <p>Anchoring a high-value defense and aerospace cluster as part of the host nation's industrial diversification.</p>
+      </div>
+      <div class="align-cell">
+        <div class="num">02</div>
+        <h4>Defense Self-Sufficiency</h4>
+        <p>Reducing dependence on foreign procurement through sovereign manufacturing and operational capability.</p>
+      </div>
+      <div class="align-cell">
+        <div class="num">03</div>
+        <h4>High-Value Job Creation</h4>
+        <p>Engineering, manufacturing, and operational roles for nationals across the full UAS value chain.</p>
+      </div>
+      <div class="align-cell">
+        <div class="num">04</div>
+        <h4>Technology Leadership</h4>
+        <p>Establishing the host nation as a regional leader in unmanned vehicles and defense intelligence infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="engage">
+  <div class="container">
+    <span class="label" style="display:block;margin-bottom:24px">// Strategic Engagement</span>
+    <h2>For sovereign stakeholders, <span class="accent">defense agencies,</span> and aligned strategic partners.</h2>
+    <p>
+      Sterling Autonomous Systems is positioning to engage regional
+      sovereign defense agencies, regulatory bodies, and strategic
+      industrial partners to anchor a national unmanned vehicle
+      industry. Reach out to begin a confidential discussion.
+    </p>
+    <div class="cta-actions">
+      <a href="mailto:vajihkhan@gmail.com?subject=Sterling%20Aerial%20Systems%20%E2%80%94%20Strategic%20Engagement" class="btn btn-primary">
+        Contact Leadership <span class="arrow">→</span>
+      </a>
+      <a href="#thesis" class="btn btn-ghost">
+        Review Capability Brief <span class="arrow">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 12 L12 4 L22 12 L12 20 Z" />
+              <circle cx="12" cy="12" r="2" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="brand-name">STERLING AUTONOMOUS SYSTEMS<span>/ SAS</span></div>
+        </div>
+        <p class="foot-brand">
+          A joint venture with Integrated Dynamics, operating as a DBA
+          of Sterling Ridge Management LP. Building the end-to-end
+          platform to stand up a sovereign unmanned vehicle industry
+          across air, land, and maritime domains.
+        </p>
+      </div>
+
+      <div class="foot-col">
+        <h5>Platform</h5>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#missions">Mission Profiles</a>
+        <a href="#intelligence">Intelligence Layer</a>
+        <a href="#models">Operating Models</a>
+      </div>
+
+      <div class="foot-col">
+        <h5>Strategy</h5>
+        <a href="#thesis">Thesis</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#alignment">Strategic Alignment</a>
+        <a href="#partnership">Joint Venture</a>
+      </div>
+
+      <div class="foot-col">
+        <h5>Engage</h5>
+        <a href="mailto:vajihkhan@gmail.com">Leadership</a>
+        <a href="./ar/index.html">العربية</a>
+        <span>By appointment only</span>
+      </div>
+    </div>
+
+    <p class="foot-disclaimer">
+      Sterling Autonomous Systems references the GCC region and aligned
+      defense corridors as the strategic context for its platform.
+      References to regional industrial transformation agendas and
+      defense priorities are contextual and do not represent existing
+      endorsements, contracts, or formal relationships with any
+      government, agency, or investment entity. Any such relationships,
+      where established, will be communicated through official channels.
+    </p>
+
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Sterling Autonomous Systems · Sterling Ridge Management LP</span>
+      <span>SAS · v1.2 · Strategic Communications</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

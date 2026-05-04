@@ -1,2 +1,14 @@
+node_modules/
+.next/
+out/
+.vercel/
 .vscode/
 .DS_Store
+.env
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+
+# Confidential local artifacts
+SAS_KSA_Outreach_Gameplan.docx
+*.docx

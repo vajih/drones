@@ -12,3 +12,4 @@ next-env.d.ts
 # Confidential local artifacts
 SAS_KSA_Outreach_Gameplan.docx
 *.docx
+.vercel

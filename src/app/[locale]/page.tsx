@@ -108,6 +108,13 @@ function Home({ locale }: { locale: Locale }) {
         </div>
       </Section>
 
+      {/* OPERATOR TRAINING */}
+      <Section kicker={t('trainingKicker')} heading={t('trainingH')} lead={t('trainingP')}>
+        <Link href={`/${locale}/platform/training`} className="btn-ghost group">
+          {t('trainingCta')} <span className="arrow-rtl-flip">→</span>
+        </Link>
+      </Section>
+
       {/* INTELLIGENCE */}
       <Section kicker={t('intelligenceKicker')} heading={t('intelligenceH')} lead={t('intelligenceP')} />
 

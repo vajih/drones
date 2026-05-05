@@ -50,6 +50,14 @@ export default async function PlatformPage({ params }: { params: { locale: strin
           <span className="arrow-rtl-flip">→</span>
         </Link>
       </section>
+
+      <section className="mt-20 border-t border-line pt-12">
+        <h2 className="label-mono">{t('trainingH')}</h2>
+        <Link href={`/${params.locale}/platform/training`} className="btn-ghost group mt-6">
+          {params.locale === 'ar' ? 'برنامج تدريب المُشغِّلين' : 'Operator training program'}{' '}
+          <span className="arrow-rtl-flip">→</span>
+        </Link>
+      </section>
     </div>
   );
 }

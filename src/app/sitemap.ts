@@ -8,6 +8,7 @@ const STATIC_PATHS = [
   '',
   'platform',
   'platform/manufacturing',
+  'platform/training',
   'portfolio',
   'missions',
   'strategy',
